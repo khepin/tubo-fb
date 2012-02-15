@@ -62,9 +62,10 @@
     target=/bundles/Symfony/Bundle/AsseticBundle
     version=v1.0.1
 
-[goutte]
-    git=git://github.com/fabpot/Goutte.git
+[buzz]
+    git=http://github.com/kriswallsmith/Buzz.git
 
-[SonataGoutteBundle]
-    git=http://github.com/sonata-project/SonataGoutteBundle.git
-    target=/bundles/Sonata/GoutteBundle
+[SensioBuzzBundle]
+    git=http://github.com/sensio/SensioBuzzBundle.git
+    target=bundles/Sensio/Bundle/BuzzBundle
+
