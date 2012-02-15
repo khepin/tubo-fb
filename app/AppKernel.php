@@ -19,6 +19,8 @@ class AppKernel extends Kernel
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new Khepin\TuboBundle\KhepinTuboBundle(),
             new Sensio\Bundle\BuzzBundle\SensioBuzzBundle(),
+            new FOS\FacebookBundle\FOSFacebookBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

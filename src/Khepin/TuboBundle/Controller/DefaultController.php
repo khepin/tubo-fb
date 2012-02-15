@@ -10,6 +10,7 @@ class DefaultController extends Controller
 {
     /**
      * @Route("/")
+     * @Route("/hello/")
      * @Template()
      */
     public function indexAction()
@@ -22,5 +23,12 @@ class DefaultController extends Controller
         }
         $name = 'paul';
         return array('name' => $name);
+    }
+    
+    /**
+     * @Route("/s/test") 
+     */
+    public function testAction(){
+        return new \Symfony\Component\HttpFoundation\Response('huhuhu');
     }
 }

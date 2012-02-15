@@ -58,3 +58,25 @@ swiftmailer:
 jms_security_extra:
     secure_controllers:  true
     secure_all_services: false
+
+fos_facebook:
+      file:   %kernel.root_dir%/../vendor/facebook/src/base_facebook.php
+      alias:  facebook
+      app_id: 353971297967057
+      secret: a4bee8b98e9a95ad3fb2466fbad0041c
+      cookie: true
+      permissions: [email, user_birthday, user_location, publish_stream]
+      
+services:
+    facebook.user_provider:
+        class: Khepin\TuboBundle\Security\Provider\FacebookProvider
+        arguments:
+            facebook: "@fos_facebook.api"
+            userManager: "@fos_user.user_manager"
+            validator: "@validator"
+            container: "@service_container"
+            
+fos_user:
+    db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
+    firewall_name: public
+    user_class: Khepin\TuboBundle\Entity\User

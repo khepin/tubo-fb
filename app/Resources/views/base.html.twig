@@ -5,8 +5,22 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+        <script>
+        function goLogIn(){
+            window.location = "{{ path('_security_check') }}";
+        }
+
+        function onFbInit() {
+            if (typeof(FB) != 'undefined' && FB != null ) {
+                FB.Event.subscribe('auth.statusChange', function(response) {
+                    setTimeout(goLogIn, 500);
+                });
+            }
+        }
+        </script>
     </head>
     <body>
+        {{ facebook_initialize({'xfbml': true, 'fbAsyncInit': 'onFbInit();'}) }}
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>

@@ -69,3 +69,16 @@
     git=http://github.com/sensio/SensioBuzzBundle.git
     target=bundles/Sensio/Bundle/BuzzBundle
 
+[FOSFacebookBundle]
+    git=git://github.com/FriendsOfSymfony/FOSFacebookBundle.git
+    target=/bundles/FOS/FacebookBundle
+    version=origin/2.0
+
+[FacebookSDK]
+    git=git://github.com/facebook/php-sdk.git
+    target=/facebook
+
+[FOSUserBundle]
+    git=git://github.com/FriendsOfSymfony/FOSUserBundle.git
+    target=bundles/FOS/UserBundle
+
