@@ -58,3 +58,19 @@ swiftmailer:
 jms_security_extra:
     secure_controllers:  true
     secure_all_services: false
+
+sonata_goutte:
+    class: Sonata\GoutteBundle\Manager
+    clients:
+        default:
+            config:
+                adapter: Zend\Http\Client\Adapter\Socket
+
+        curl:
+            config:
+                maxredirects: 0
+                timeout: 30
+                useragent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.3) Gecko/20100401 Firefox/3.6.3
+                adapter: Sonata\GoutteBundle\Adapter\Curl
+                verbose_log: %kernel.logs_dir%/curl.log
+                verbose: true

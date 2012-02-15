@@ -61,3 +61,10 @@
     git=http://github.com/symfony/AsseticBundle.git
     target=/bundles/Symfony/Bundle/AsseticBundle
     version=v1.0.1
+
+[goutte]
+    git=git://github.com/fabpot/Goutte.git
+
+[SonataGoutteBundle]
+    git=http://github.com/sonata-project/SonataGoutteBundle.git
+    target=/bundles/Sonata/GoutteBundle
