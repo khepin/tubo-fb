@@ -65,7 +65,7 @@ fos_facebook:
       app_id: 353971297967057
       secret: a4bee8b98e9a95ad3fb2466fbad0041c
       cookie: true
-      permissions: [email, user_birthday, user_location, publish_stream]
+      permissions: [email, user_birthday, user_location, publish_stream, offline_access]
       
 services:
     facebook.user_provider:

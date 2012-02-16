@@ -23,6 +23,12 @@ class User extends BaseUser {
      * @var string
      */
     protected $facebookId;
+    
+    /**
+     * @ORM\Column(type="string")
+     * @var type 
+     */
+    protected $access_token;
 
     public function __construct() {
         parent::__construct();
@@ -67,4 +73,34 @@ class User extends BaseUser {
         }
     }
 
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set access_token
+     *
+     * @param string $accessToken
+     */
+    public function setAccessToken($accessToken)
+    {
+        $this->access_token = $accessToken;
+    }
+
+    /**
+     * Get access_token
+     *
+     * @return string 
+     */
+    public function getAccessToken()
+    {
+        return $this->access_token;
+    }
 }
