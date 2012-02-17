@@ -58,6 +58,9 @@ class DefaultController extends Controller {
     }
 
     protected function uploadPic(Photo $photo, $user) {
+        if(!strpos($photo->getLegend(), '#fb')){
+            return;
+        }
         $buzz = $this->get('buzz');
         $access_token = $user->getAccessToken();
         $domain = 'https://graph.facebook.com';
